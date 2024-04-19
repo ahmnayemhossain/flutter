@@ -1,0 +1,60 @@
+@override
+Widget build(BuildContext context) {
+
+  // Define a button style for the submit button
+  ButtonStyle buttonStyle = ElevatedButton.styleFrom(
+    minimumSize: Size(double.infinity, 60) // Set minimum button size
+  );
+
+  return Scaffold(
+    appBar: AppBar(
+      title: Text('My App'), // Set app bar title
+    ),
+    body: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        // Text field for first name
+        Padding(
+          padding: EdgeInsets.all(10),
+          child: TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'First Name',
+            ),
+          ),
+        ),
+        // Text field for last name
+        Padding(
+          padding: EdgeInsets.all(10),
+          child: TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Last Name',
+            ),
+          ),
+        ),
+        // Text field for email address
+        Padding(
+          padding: EdgeInsets.all(10),
+          child: TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Email Address',
+            ),
+          ),
+        ),
+        // Submit button
+        Padding(
+          padding: EdgeInsets.all(10),
+          child: ElevatedButton(
+            onPressed: () {
+              // Handle submit button press
+            },
+            child: Text('Submit'),
+            style: buttonStyle,
+          ),
+        )
+      ],
+    ),
+  );
+}
